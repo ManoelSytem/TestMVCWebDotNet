@@ -13,7 +13,8 @@ namespace DotNet5Crud.Models
         {
         }
         public virtual DbSet<Employee> Employees { get; set; }
-
+        
+        public virtual DbSet<Person> Person { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Employee>(entity =>

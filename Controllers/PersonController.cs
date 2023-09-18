@@ -17,8 +17,9 @@ namespace DotNet5Crud.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> ListPerson()
+        public async Task<IActionResult> ListPersonFilter(string filterValueAlternaive)
         {
+          if(String.IsNullOrEmpty(filterValueAlternaive){
              
            List<Person> listperson = new List<Person>
               {
@@ -39,9 +40,7 @@ namespace DotNet5Crud.Controllers
               //Ver output
               Console.WriteLine(string.Join(',', filtrado));
               Debug.WriteLine(string.Join(',', filtrado));
-
-              
-              
+              }
         }
     } 
   }
